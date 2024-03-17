@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav style="background-color: darkgreen;">
+            <ul class=" m-2 nav">
+                <li class="nav-item">
+                    <a class="nav-link " style="color: yellow;"
+                        href="/home">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: yellow;" href="/shop">Sản
+                        phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="/add-product">Thêm
+                        sản phẩm</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <% for(product of products){ %>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card mb-4">
+                        <img
+                            src="images/<%= product.imageURL %>"
+                            class="card-img-top" alt="...">
+
+                        <div class="card-body">
+                            <h5 class="card-title"><%= product.title %></h5>
+                            <p class="card-text"><%= product.description %></p>
+
+                            <div class="cart-title"></div>
+                            <card-text><a href class="btn btn-primary">Thêm giỏ hàng</a></card-text>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
